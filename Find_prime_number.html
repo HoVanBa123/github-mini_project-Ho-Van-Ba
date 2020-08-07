@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+    <div>
+        <p id="sv"></p>
+    </div>
+    <script type="text/javascript">
+        const pading = 2;
+        function kiemtra_snt (n) { 
+          // const firstElement = a[0]
+           let tager = true;
+            if ( n < 2) {
+                tager = false;
+            } else {
+                for ( i = 2; i < n-1; i++)
+                {
+                    if ( n % i == 0) {
+                        tager = false;
+                        break;
+                    }
+                }
+            }
+           return tager;
+        }
+        // var  art = [13, 45, 22, 17, 89, 15, 17];
+        // for ( let i = 0; i < art.length; i++) {
+        //     if (kiemtra_snt(art[i])) {
+        //         console.log(art[i]);
+        //     }
+        // }
+        var n = 100;
+        for (let i = 2; i <= n; i++) {
+            let tmp = 1;
+                if (kiemtra_snt(i)) {
+                console.log(i);
+            }
+        }
+    
+        if (n < 0) {
+            console.log("n la so am")
+        } else if (n <= 10) {
+            console.log("n nam trong khoang tu 0 den 10")
+        } else if (n <= 20) {
+            console.log("n nam trong khoang tu 10 den 20")
+        } else {
+            console.log("ko phai thu minh can")
+            //to do
+        }
+        const PI = 3.14
+        var atr = [1, 2, 3, 4, 6]
+        atr.forEach(function (n) {
+            console.log(n)
+        })
+
+        atr.forEach((v) => {
+            console.log(v)
+        })
+
+        function mulFunc(x, y, z = 0) {
+            console.log(z)
+        }
+
+        mulFunc(2, 4, 20)
+        var change = atr.map(v => v*v)
+        console.log(change)
+        // mang hash
+        var sv = [{name: "ba", toan: 7, van: 9}, {name: "phuong", toan: 7}]
+        sv.push({name: "nam", toan: 9})
+        var name = "";
+
+        sv.forEach(v => {
+            name += `name: ${v.name} <br> diem: ${v.toan} <br>`
+            console.log(name)
+            console.log("diem:" + v.toan)
+        })
+        // tim phan tu can va thiet lap gia tri
+        document.getElementById("sv").innerHTML = name;
+        // chuong trinh = cau truc du lieu + giai thuat
+        </script>
+</body>
+</html>
+</html>
